@@ -16,7 +16,7 @@ public class ConexaoBD {
 	private static String driver = "com.mysql.jdbc.Driver";
 	private static String url = "jdbc:mysql://localhost:3306/contatos?useSSL=false";
 	private static String user = "root";
-	private static String password = "Leaozinho1996";
+	private static String password = "*****";
 
 	public ConexaoBD() {
 		verificarBanco();
@@ -27,9 +27,9 @@ public class ConexaoBD {
 			Class.forName(driver);
 			return DriverManager.getConnection(url, user, password);
 		} catch (ClassNotFoundException | SQLException ex) {
-			JOptionPane.showMessageDialog(null, "Banco n„o conectado! Favor verificar conex„o!", "AtenÁ„o",JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Banco n√£o conectado! Favor verificar conex√£o!", "Aten√ß√£o",JOptionPane.INFORMATION_MESSAGE);
 			FrameBase.fecharJanela();
-			throw new RuntimeException("Erro na ExecuÁ„o", ex);
+			throw new RuntimeException("Erro na Execu√ß√£o", ex);
 		}
 	}
 
